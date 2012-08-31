@@ -68,14 +68,14 @@ class Module implements InitProviderInterface, AutoloaderProviderInterface, Conf
 
     public function getConfig($env = null)
     {
-        return include __DIR__ . '/configs/module.config.php';
+        return include __DIR__ . '/../../configs/module.config.php';
     }
 
     public function getAutoloaderConfig()
     {
         return array(
             'Zend\Loader\ClassMapAutoloader' => array(
-                __DIR__ . '/autoload_classmap.php',
+                __DIR__ . '/../../autoload_classmap.php',
             ),
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
